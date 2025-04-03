@@ -1,0 +1,134 @@
+import Link from "next/link"
+import Image from "next/image"
+import WhatsAppButton from "@/components/whatsapp-button"
+import ImageSlider from "@/components/image-slider"
+
+export default function Home() {
+  const slides = [
+    {
+      url: "/nuevasfotos/PORTADA 1_Mesa de trabajo 1.jpg",
+      alt: "Veterinary clinic slide 1",
+    },
+    {
+      url: "/nuevasfotos/PORTADA 2_Mesa de trabajo 1.jpg",
+      alt: "Veterinary clinic slide 2",
+    },
+    {
+      url: "/nuevasfotos/PORTADA 3_Mesa de trabajo 1.jpg",
+      alt: "Veterinary clinic slide 3",
+    },
+  ]
+
+  return (
+    <main className="flex min-h-screen flex-col">
+      <ImageSlider slides={slides} />
+
+      <section className="bg-[#f7f3e6] py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-['HelveticaBlack'] text-center mb-12 text-[#09465b]">
+            Nuestros Servicios
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-[#09465b] rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+              <Link href="/nosotros">
+                <Image
+                  src="/nuevasfotos/SOBRE NOSOTROS_Mesa de trabajo 1_Mesa de trabajo 1.jpg"
+                  alt="Sobre Nosotros"
+                  width={500}
+                  height={300}
+                  className="w-full"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-['HelveticaBold'] mb-2 text-[#f7f3e6]">Sobre Nosotros</h3>
+                  <p className="text-[#f7f3e6]/90 font-['HelveticaRoman']">
+                    Conozca más sobre nuestra clínica veterinaria y nuestra pasión por el cuidado de sus mascotas.
+                  </p>
+                </div>
+              </Link>
+            </div>
+
+            <div className="bg-[#09465b] rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+              <Link href="/servicios">
+                <Image
+                  src="/nuevasfotos/NUESTROS SERVICIOS_Mesa de trabajo 1_Mesa de trabajo 1.jpg"
+                  alt="Nuestros Servicios"
+                  width={500}
+                  height={300}
+                  className="w-full"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-['HelveticaBold'] mb-2 text-[#f7f3e6]">Nuestros Servicios</h3>
+                  <p className="text-[#f7f3e6]/90 font-['HelveticaRoman']">
+                    Ofrecemos una amplia gama de servicios veterinarios para mantener a su mascota saludable y feliz.
+                  </p>
+                </div>
+              </Link>
+            </div>
+
+            <div className="bg-[#09465b] rounded-lg shadow-md overflow-hidden transition-transform hover:scale-105">
+              <Link href="/equipo">
+                <Image
+                  src="/nuevasfotos/NUESTRO EQUIPO_Mesa de trabajo 1_Mesa de trabajo 1_Mesa de trabajo 1.jpg"
+                  alt="Nuestro Equipo"
+                  width={500}
+                  height={300}
+                  className="w-full"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-['HelveticaBold'] mb-2 text-[#f7f3e6]">Nuestro Equipo</h3>
+                  <p className="text-[#f7f3e6]/90 font-['HelveticaRoman']">
+                    Conozca a nuestro equipo de profesionales dedicados al cuidado y bienestar de sus mascotas.
+                  </p>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-[#f7f3e6]">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-['HelveticaBlack'] text-center mb-12 text-[#09465b]">
+            ¿Por qué elegirnos?
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center p-6 bg-[#f7f3e6] rounded-lg">
+              <div className="w-16 h-16 bg-[#09465b] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-['HelveticaBold']">1</span>
+              </div>
+              <h3 className="text-xl font-['HelveticaBold'] mb-2 text-[#09465b]">
+                Experiencia y Profesionalismo
+              </h3>
+              <p className="text-[#09465b]/80 font-['HelveticaRoman']">
+                Contamos con un equipo de veterinarios altamente calificados y con años de experiencia.
+              </p>
+            </div>
+
+            <div className="text-center p-6 bg-[#f7f3e6] rounded-lg">
+              <div className="w-16 h-16 bg-[#09465b] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-['HelveticaBold']">2</span>
+              </div>
+              <h3 className="text-xl font-['HelveticaBold'] mb-2 text-[#09465b]">Atención Personalizada</h3>
+              <p className="text-[#09465b]/80 font-['HelveticaRoman']">
+                Cada mascota recibe un trato único y personalizado según sus necesidades específicas.
+              </p>
+            </div>
+
+            <div className="text-center p-6 bg-[#f7f3e6] rounded-lg">
+              <div className="w-16 h-16 bg-[#09465b] rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-['HelveticaBoldRounded']">3</span>
+              </div>
+              <h3 className="text-xl font-['HelveticaBold'] mb-2 text-[#09465b]">Cuidado Integral</h3>
+              <p className="text-[#09465b]/80 font-['HelveticaRoman']">
+              Brindamos un enfoque completo en la salud de tu mascota, desde medicina preventiva hasta tratamientos especializados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <WhatsAppButton phoneNumber="+51966842258" />
+    </main>
+  )
+}
+

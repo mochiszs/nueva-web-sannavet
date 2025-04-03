@@ -1,0 +1,126 @@
+"use client"
+
+import Link from "next/link"
+import Image from "next/image"
+import { Menu } from "lucide-react"
+import { useState } from "react"
+
+export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
+  return (
+    <header className="bg-[#09465b] text-white">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-20">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/nuevasfotos/SANNA VET LOGO BLANCO_Mesa de trabajo 1.png"
+              alt="Logo Veterinaria"
+              width={180}
+              height={50}
+              className="h-12 w-auto"
+            />
+          </Link>
+
+          <button className="md:hidden focus:outline-none" onClick={toggleMenu}>
+            <Menu size={24} />
+          </button>
+
+          <nav className="hidden md:flex space-x-8">
+            <Link
+              href="/"
+              className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+            >
+              Inicio
+            </Link>
+            <Link
+              href="/nosotros"
+              className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+            >
+              Nosotros
+            </Link>
+            <Link
+              href="/servicios"
+              className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+            >
+              Servicios
+            </Link>
+            <Link
+              href="/equipo"
+              className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+            >
+              Equipo
+            </Link>
+            <Link
+              href="/sede"
+              className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+            >
+              Sede
+            </Link>
+            <Link
+              href="/contacto"
+              className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+            >
+              Contacto
+            </Link>
+          </nav>
+        </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 pb-6">
+            <nav className="flex flex-col space-y-4">
+              <Link
+                href="/"
+                className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Inicio
+              </Link>
+              <Link
+                href="/nosotros"
+                className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Nosotros
+              </Link>
+              <Link
+                href="/servicios"
+                className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Servicios
+              </Link>
+              <Link
+                href="/equipo"
+                className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Equipo
+              </Link>
+              <Link
+                href="/sede"
+                className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Sede
+              </Link>
+              <Link
+                href="/contacto"
+                className="hover:underline underline-offset-4 decoration-2 transition-colors font-['HelveticaBold']"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contacto
+              </Link>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  )
+}
+
