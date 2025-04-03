@@ -4,6 +4,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased; /* Mejora la suavidad de las fuentes en Safari */
 }
 
 @layer utilities {
@@ -90,5 +91,26 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased; /* Para mejor suavizado en dispositivos Apple */
+    -moz-osx-font-smoothing: grayscale; /* Opcional: para Firefox en macOS */
+  }
+
+  /* Ajustes para dispositivos móviles */
+  @media (max-width: 640px) {
+    body {
+      font-size: 16px; /* Ajuste de tamaño de fuente para pantallas pequeñas */
+    }
+  }
+
+  /* Evitar que el body haga scroll horizontal */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Mejora la visibilidad de las imágenes en dispositivos móviles */
+  img {
+    max-width: 100%;
+    height: auto;
   }
 }
+
