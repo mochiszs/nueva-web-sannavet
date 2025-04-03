@@ -1,7 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import WhatsAppButton from "@/components/whatsapp-button"
-
+import ImageSlider from "@/components/image-slider"
 
 export default function Home() {
   const slides = [
@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col">
-      
+      <ImageSlider slides={slides} />
 
       <section className="bg-[#f7f3e6] py-16">
         <div className="container mx-auto px-4">
@@ -131,4 +131,8 @@ export default function Home() {
     </main>
   )
 }
+
+
+
+
 
