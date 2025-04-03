@@ -18,13 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
-        {/* Fallback para las fuentes Helvetica Rounded */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Helvetica+Rounded:wght@400;700;900&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+      
       <body>
         <Header />
         {children}
