@@ -62,6 +62,23 @@ const config: Config = {
   				ring: 'hsl(var(--sidebar-ring))'
   			}
   		},
+		  extend: {
+			colors: {
+			  // ...tu configuración actual de colores
+			},
+		  
+			fontFamily: {
+			  helvetica: ['Helvetica Roman', 'sans-serif'],
+			  'helvetica-bold': ['HelveticaBold', 'sans-serif'],
+			  'helvetica-black': ['HelveticaBlack', 'sans-serif'],
+			},
+		  
+			borderRadius: {
+			  // ...
+			},
+			// etc...
+		  },
+		  
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',

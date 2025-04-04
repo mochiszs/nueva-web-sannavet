@@ -12,6 +12,29 @@ body {
     text-wrap: balance;
   }
 }
+@font-face {
+  font-family: "HelveticaBlack";
+  src: url("/fonts/HelveticaRoundedLTStd-Black.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaBold";
+  src: url("/fonts/HelveticaRoundedLTStd-Bd.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "HelveticaRoman";
+  src: url("/fonts/Helvetica Roman.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 @layer base {
   :root {

@@ -7,8 +7,7 @@ import Footer from "@/components/footer"
 export const metadata: Metadata = {
   title: "Sannavet - Cuidamos la salud de tu mascota",
   description: "Cuidamos de la salud y bienestar de tus mascotas",
-  icons:"/nuevasfotos/ISOTIPO SANNAVET_Mesa de trabajo 1.png",
-   
+  icons: "/nuevasfotos/ISOTIPO SANNAVET_Mesa de trabajo 1.png", // Asegúrate de que esta ruta sea correcta
 }
 
 export default function RootLayout({
@@ -18,16 +17,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      
+      <head>
+        {/* Meta etiquetas, íconos, etc. */}
+        <meta name="description" content="Cuidamos de la salud y bienestar de tus mascotas"/>
+        <link rel="icon" href="/nuevasfotos/ISOTIPO SANNAVET_Mesa de trabajo 1.png"/> {/* Aquí se define el ícono */}
+      </head>
       <body>
         <Header />
-        {children}
+        {children} {/* Esto asegura que el contenido de la página se inserte aquí */}
         <Footer />
       </body>
     </html>
   )
 }
-
-
 
 import './globals.css'
